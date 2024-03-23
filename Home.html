@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWiki</title>
+    <link rel="stylesheet" href="HomeStyle.css">
+</head>
+<body link="white" vlink="#f0f8ff">
+<div class="logoAndName">
+    <h1>Dark Encyclopedia</h1>
+    <div class="lines">
+        <div class="enseclopLines1" id="enseclopLines1"></div>
+        <div class="enseclopLines2" id="enseclopLines2"></div>
+        <div class="enseclopLines3" id="enseclopLines3"></div>
+
+        <div class="languages">
+            <p>Only English Now</p>
+        </div>
+    </div>
+</div>
+
+<div class="serchPart">
+    <input type="text" placeholder="find everything" class="findEvery" id="inp" value="" onchange="getRandomLinks()" onkeyup="detectLanguage()" autocomplete="off">
+</div>
+
+<div class="forResult">
+    <ul id="result"></ul>
+</div>
+
+<footer>
+    <div class="poweredBy">
+        <div class="up">
+            <h3>Powered By Wikipedia</h3>
+            <img src="pictures/Wikipedia-logo-v2.svg.png" width="70px">
+        </div>
+        <div class="down">
+            <p>All info you find by Wikipedia</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

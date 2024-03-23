@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    height: 70vh;
+    font-family: Bahnschrift;
+
+    user-select: none;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 45px;
+}
+a{
+    text-decoration: none;
+}
+.logoAndName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.lines{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enseclopLines1{
+    border: 1px solid #754acb;
+    transform: rotate(0deg);
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    animation: LineAnim1 forwards infinite 10s;
+}
+.enseclopLines1:before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    background: linear-gradient(45deg, #7239b7, #2a1bc9);
+    z-index: -1;
+}
+.enseclopLines1:after{
+    content: '';
+    position: absolute;
+    top: 5px; right: 5px; bottom: 5px; left: 5px;
+    background: #000;
+}
+.enseclopLines2{
+    border: 5px solid #ff0000;
+    width: 310px;
+    height: 310px;
+    border-radius: 80% 170% 80% 170%/10% 180% 10% 180%;
+    position: absolute;
+    transform: rotate(30deg);
+    animation: LineAnim2 forwards infinite 20s;
+}
+.enseclopLines3{
+    border: 2px solid #e83f3f;
+    width: 170px;
+    height: 170px;
+    border-radius: 70% 80% 90% 80%;
+    position: absolute;
+    transform: rotate(60deg);
+    animation: LineAnim3 forwards infinite 12s;
+}
+.languages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -400px;
+}
+.serchPart{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.findEvery{
+    padding: 13px;
+    width: 300px;
+    border: none;
+}
+ul{
+    width: 800px;
+    margin-top: 30px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+}
+.forResult{
+    display: flex;
+    justify-content: center;
+}
+.poweredBy{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    position: absolute;
+    right: -200px;
+}
+.up{
+    display: flex;
+    gap: 10px;
+}
+.down{
+    font-size: 20px;
+    position: relative;
+    top: -14px;
+}
+b{
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    color: #acdbff;
+}
+footer{
+    height: 100px;
+}
