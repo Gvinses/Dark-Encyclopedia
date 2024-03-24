@@ -11,3 +11,5 @@ What is it:
   Web-site which can help you to find information in Wikipedia, but links anyway go to official Wikipedia.
 
 some Javascript code was taken from stackoverflow (Wikipedia searching)
+
+Wikipedia - https://www.wikipedia.org/
