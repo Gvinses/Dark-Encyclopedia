@@ -5,16 +5,39 @@ body{
     background: black;
     color: white;
     height: 70vh;
-    font-family: Bahnschrift;
+    font-family: Bahnschrift, serif;
 
     user-select: none;
     overflow-x: hidden;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 h1{
     font-size: 45px;
 }
 a{
+    width: 800px;
     text-decoration: none;
+    height: 100px;
+    overflow: hidden;
+}
+li{
+    width: 800px;
+    height: 20px;
+    overflow: hidden;
+    transition: 1s 0.4s ease-in-out;
+}
+li:hover{
+    height: 200px;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, white, white, white, white, #adadad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .logoAndName{
     display: flex;

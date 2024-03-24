@@ -19,7 +19,7 @@ function finding(){
                 a.href = `https://en.wikipedia.org/wiki/${title}`;
                 a.setAttribute('target', '_blank');
                 a.textContent = text;
-                a.innerHTML = `${title}<br>${extract} <b>By Wikipedia</b>`;
+                a.innerHTML = `${title}<br>${extract}`;
                 li.appendChild(a);
                 result.appendChild(li);
             });
@@ -51,7 +51,7 @@ function rotateRectangle2() {
     let rectangle2 = document.getElementById('enseclopLines2');
     let rotation2 = Math.floor(Math.random() * (360 - (-360) + 1)) + (-360);
     rotation2 = Math.max(Math.abs(rotation2), 30) * (rotation2 < 0 ? -1 : 1);
-    rectangle2.style.transition = 'transform 3s'; rectangle2.style.transform = 'rotate(' + rotation2 + 'deg)';
+    rectangle2.style.transition = 'transform 4s'; rectangle2.style.transform = 'rotate(' + rotation2 + 'deg)';
 }
 
 function rotateRectangle3() {
@@ -62,5 +62,5 @@ function rotateRectangle3() {
 }
 
 setInterval(rotateRectangle, 2900);
-setInterval(rotateRectangle2, 2700);
+setInterval(rotateRectangle2, 3700);
 setInterval(rotateRectangle3, 2800);
