@@ -1,0 +1,37 @@
+import subprocess
+import datetime
+import time
+
+def set_languages(languages):
+    # Устанавливаем языки
+    lang_command = 'Set-WinUser  LanguageList -LanguageList "{}" -Force'.format(','.join(languages))
+    subprocess.run(['powershell', '-Command', lang_command])
+
+def change_languages_to_bul_de():
+    # Устанавливаем болгарский и немецкий языки
+    set_languages(["bg-BG", "de-DE"])
+
+def revert_languages():
+    # Возвращаем русский и английский языки
+    set_languages(["ru-RU", "en-US"])
+
+def main():
+    while True:
+        # Получаем текущее время
+        current_time = datetime.datetime.now().time()
+        start_time = datetime.time(18, 20)
+        end_time = datetime.time(20, 0)
+
+        if start_time <= current_time < end_time:
+            change_languages_to_bul_de()
+            print("Языки изменены на болгарский и немецкий.")
+        elif current_time >= end_time:
+            revert_languages()
+            print("Языки возвращены на русский и английский.")
+            break  # Завершаем цикл после возврата языков
+
+        # Ждем 60 секунд перед следующей проверкой
+        time.sleep(60)
+
+if __name__ == "__main__":
+    main()
